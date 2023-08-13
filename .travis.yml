@@ -18,7 +18,7 @@ jobs:
             cpu: 2
             memory: 4G
       env_script: env
-      show_script: cat $TRAVIS_WORKING_DIR/build_rom.sh
+      show_script: cat $TRAVIS_BUILD_DIR/build_rom.sh
       notify_script: curl -s https://raw.githubusercontent.com/shamanthkn5/temp/main/ci/notify.sh | bash
       test_script: curl -s https://raw.githubusercontent.com/shamanthkn5/temp/main/ci/test.sh | bash
 
@@ -39,7 +39,7 @@ jobs:
               - /home/travis/roms:/home/travis/roms
               - /home/travis/ccache:/home/travis/ccache
               - /home/travis/.config:/home/travis/.config
-      show_script: cat $TRAVIS_WORKING_DIR/build_rom.sh
+      show_script: cat $TRAVIS_BUILD_DIR/build_rom.sh
       test_script: curl -s https://raw.githubusercontent.com/shamanthkn5/temp/main/ci/test.sh | bash
       sync_script: curl -s https://raw.githubusercontent.com/shamanthkn5/temp/main/ci/sync.sh | bash
       tsync_script: curl -s https://raw.githubusercontent.com/shamanthkn5/temp/main/ci/tsync.sh | bash
